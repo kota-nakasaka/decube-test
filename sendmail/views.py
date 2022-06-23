@@ -10,7 +10,7 @@ class IndexView(View):
 
     def get(self, request, *args, **kwargs):
         subject = "【あしあと】配布したQRコードから貴社サイトにアクセスがありました"
-        message = request.get_full_path()
+        message = request.build_absolute_uri()
         from_email = "web.knakasaka@gmail.com"
         recipient_list = ["web.decube@gmail.com"]
         try:
