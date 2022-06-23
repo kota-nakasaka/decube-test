@@ -6,6 +6,7 @@ from django.core.mail import BadHeaderError, EmailMessage, send_mail
 from django.http import HttpResponse
 import textwrap
 
+
 class IndexView(View):
 
     def get(self, request, *args, **kwargs):
