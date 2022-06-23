@@ -18,7 +18,7 @@ class IndexView(View):
             send_mail(subject, message, from_email, recipient_list)
         except BadHeaderError:
             return HttpResponse('無効なヘッダが検出されました。')
-        return render(request, 'sendmail/index.html')
+        return render(request, 'sendmail/redirect.html')
     template_name = 'index.html'
 
 class RedirectView(View):
